@@ -1,0 +1,56 @@
+{
+  "name": "@metamodern/svelte-render-starter",
+  "version": "0.0.0",
+  "description": "Starter project using @metamodern/svelte-render",
+  "author": "Daniel C. Narey",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metamodern-design/svelte-render-starter"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "del dist/* && svelte-render",
+    "build:dev": "del dist/* && svelte-render --development",
+    "deploy": "netlify build && netlify deploy --prod",
+    "local": "netlify build --context deploy-preview && netlify dev",
+    "lint": "eslint --fix src",
+    "merge:next": "git checkout master && git pull && git merge next -s recursive -Xtheirs",
+    "serve": "sirv dist -s --port=5000",
+    "sync": "git pull && git add . && git commit -m 'automated sync' && git push",
+    "test": "npm run build",
+    "update": "updtr"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.0.1",
+    "@metamodern/copy-fontsource": "^1.0.0",
+    "@metamodern/pug-filter-markdown": "^1.0.1",
+    "@rollup/plugin-alias": "^3.1.1",
+    "cssnano": "^4.1.10",
+    "navaid": "^1.2.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sugarss": "^3.0.3",
+    "svelte": "^3.31.0",
+    "svelte-preprocess": "^4.6.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@metamodern/svelte-render": "^3.0.3",
+    "core-js": "^3.8.1",
+    "del-cli": "^3.0.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-svelte3": "^3.0.0",
+    "postcss": "^8.2.1",
+    "pug": "^3.0.1",
+    "sirv-cli": "^1.0.10",
+    "updtr": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
