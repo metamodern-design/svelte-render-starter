@@ -56,9 +56,6 @@
   @tailwind base
 
   #app
-    @apply overflow-x-hidden
-    @apply overflow-y-scroll
-    @apply antialiased
     font-family: Inter
     font-weight: 400
 
