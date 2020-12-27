@@ -53,8 +53,12 @@
 <style lang="sugarss">
   @import '@fontsource/inter/400.css'
   @import '@fontsource/inter/variable.css'
-  
+  @tailwind base
+
   #app
+    @apply overflow-x-hidden
+    @apply overflow-y-scroll
+    @apply antialiased
     font-family: Inter
     font-weight: 400
 
