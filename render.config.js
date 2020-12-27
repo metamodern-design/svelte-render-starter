@@ -17,7 +17,7 @@ const config = ({
   development = false,
 } = {}) => ({
   browsers,
-  entry: 'src/routes/index.svelte',
+  entry: 'routes/index.svelte',
   rollupInputPlugins: [
     alias({
       entries: {
