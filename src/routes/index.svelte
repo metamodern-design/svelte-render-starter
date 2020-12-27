@@ -2,7 +2,7 @@
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import navaid from 'navaid';
   
-  import routes from '$routes/index.js';
+  import { routes } from '$routes/index.js';
   import Nav from '$components/Nav.svelte';
   import Main from '$components/Main.svelte';
   import Footer from '$components/Footer.svelte';

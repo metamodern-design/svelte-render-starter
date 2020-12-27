@@ -28,7 +28,7 @@
     @apply text-center
   
   button
-    @apply font-bold text-orange-600
+    @apply font-bold text-yellow-600
       
   @media print
     p.nav

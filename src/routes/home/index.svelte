@@ -2,7 +2,7 @@
   section
     p Hello!
     p Welcome! 
-    p.italic ¡Bienvenidos!
+    p ¡Bienvenidos!
 
 </template>
 
@@ -11,8 +11,5 @@
   section
     @apply w-full text-center
     @apply text-xl
-  
-  p.italic
-    @apply italic
 
 </style>

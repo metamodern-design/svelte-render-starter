@@ -1,5 +1,5 @@
 <script>
-  import Routes from '$routes/index.js';
+  import { routes } from '$routes/index.js';
   
   export let title;
 
@@ -9,7 +9,7 @@
 <template lang="pug">
   nav
     ul
-      +each('Routes as entry')
+      +each('routes as entry')
         +if('entry.title')
           li
             a.button(
@@ -28,7 +28,7 @@
   ul
     @apply flex
     @apply bg-gray-600 text-white
-    @apply font-bold text-xs leading-xl tracking-wide uppercase text-left
+    @apply font-bold text-xs leading-10 tracking-wide uppercase text-left
   
   a.button
     @apply px-8 py-2
