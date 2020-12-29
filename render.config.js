@@ -21,8 +21,8 @@ const config = ({
   rollupInputPlugins: [
     alias({
       entries: {
-        '$components': resolve(context, 'src/components'),
-        '$routes': resolve(context, 'src/routes'),
+        '$': resolve(context, 'src/components'),
+        '@': resolve(context, 'src/routes'),
       },
     }),
   ],
