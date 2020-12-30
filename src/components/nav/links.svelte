@@ -1,12 +1,16 @@
 <script>
-  export let items = [{ title: 'Home', url: '/' }];
-  export let location;
+  export let items = [];
+  
+  const currentPath = window.location.href;
 
 </script>
 
 <template lang="pug">  
-  +each('items as { title, url }')
-    a(class= active: '{url}' === '{location}' })
+  +each('items as { title, path }')
+    a(
+      href= '{path}'
+      class= active: '{path}' === '{currentPath}' }
+    )
       = title
 
 </template>

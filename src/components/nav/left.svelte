@@ -1,29 +1,21 @@
-<script>
-  import Logo from '$/nav/logo.svelte';
-  
-  export let src;
-  export let alt = '';
-
-</script>
-
 <template lang="pug">
-  .left-container
-    Logo('{src}' '{alt}')
+  .outer-flex
+    slot(name="logo")
     
     .hide-on-mobile
-      .items-wrapper
-        slot
+      .inner-flex
+        slot(name="items")
         
 </template>
 
 <style lang="sugarss">
-  .left-container
+  .outer-flex
     @apply flex items-center
     
   .hide-on-mobile
     @apply hidden md:block
   
-  .items-wrapper
+  .inner-flex
     @apply flex items-baseline space-x-4
     @apply ml-10
 

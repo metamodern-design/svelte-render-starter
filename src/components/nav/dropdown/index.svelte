@@ -1,30 +1,20 @@
-<script>
-  export let src = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80';
-  export let alt = 'Open menu';
-  export let items = [{ title: 'No items', url: '#' }];
-  
-</script>
-
 <template lang="pug">
-  .dropdown-item
-    .dropdown-trigger
+  .relative-container
+    div
       button(
         id="user-menu"
         aria-haspopup="true"
       )
         span= '{alt}'
 
-        img(
-          src='{src}'
-          alt=""
-        )
+        slot(name="trigger")
 
-    .dropdown-panel(
+    .popup-menu(
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="user-menu"
     )
-      NavDropdownLinks('{items}')
+      slot(name="items")
 
     //
       Profile dropdown panel, show/hide based on dropdown state.
@@ -38,7 +28,7 @@
 </template>
 
 <style lang="sugarss">
-  .dropdown-item
+  .relative-container
     @apply relative
     @apply ml-3
     
@@ -51,10 +41,11 @@
   button > span
     @apply sr-only
   
-  button > img
+  button > img,
+  button > svg
     @apply h-8 w-8 rounded-full
     
-  .dropdown-panel
+  .popup-menu
     @apply absolute origin-top-right right-0
     @apply w-48 mt-2 py-1 
     @apply bg-white rounded-md shadow-lg 
