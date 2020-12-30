@@ -26,9 +26,9 @@
   };
   
   const userMenu = [
-    { title = 'Your Profile', path = '#' },
-    { title = 'Settings', path = '#' },
-    { title = 'Sign Out', path = '#' },
+    { title: 'Your Profile', path: '#' },
+    { title: 'Settings', path: '#' },
+    { title: 'Sign Out', path: '#' },
   ];
 
 </script>

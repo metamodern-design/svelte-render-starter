@@ -1,6 +1,6 @@
 /* eslint no-console: off */
 
-import App from '$routes/index.svelte';
+import App from '@/index.svelte';
 
 try {
   const Client = new App({
