@@ -3,13 +3,13 @@
   import Right from '$/nav/right.svelte';
   import Links from '$/nav/links.svelte';
   import Icon from '$/nav/icon.svelte';
+  import Bell from '$/nav/icons/bell.svelte';
   import Dropdown from '$/nav/dropdown/index.svelte';
   import DropdownLinks from '$/nav/dropdown/links.svelte';
+  import Toggle from '$/nav/mobile/toggle.svelte';
   import Mobile from '$/nav/mobile/index.svelte';
-  import Hamburger from '$/nav/mobile/hamburger.svelte';
-  import Bell from '$/nav/icons/bell.svelte';
   
-  import { routes } from '@/index.js';
+  import { routes } from '_/routes.js';
   
   const logo = {
     src: 'https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg',
@@ -66,9 +66,9 @@
             )
 
         .show-on-mobile
-          Hamburger
+          Toggle
 
-    Mobile
+    // Mobile
 
 </template>
 

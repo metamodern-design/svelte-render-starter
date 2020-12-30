@@ -1,11 +1,12 @@
 <script>
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import navaid from 'navaid';
-  
-  import { routes } from '@/index.js';
-  import Nav from '$/Nav.svelte';
+
+  import Nav from '$/nav/index.svelte';
   import Main from '$/Main.svelte';
   import Footer from '$/Footer.svelte';
+  
+  import { routes } from '_/routes.js';
 
   let Content;
   let Props = {};

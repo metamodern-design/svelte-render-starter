@@ -9,7 +9,7 @@
   +each('items as { title, path }')
     a(
       href= '{path}'
-      class= active: '{path}' === '{currentPath}' }
+      class:active= '{path === currentPath}'
     )
       = title
 
