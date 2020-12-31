@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte';
+
   export let items = [];
   export let secondary = false;
   
