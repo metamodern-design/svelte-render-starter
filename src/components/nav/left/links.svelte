@@ -1,7 +1,7 @@
 <script>
   export let items = [];
   
-  const currentPath = window.location.href;
+  const currentPath = window ? window.location.href : '/';
 
 </script>
 
