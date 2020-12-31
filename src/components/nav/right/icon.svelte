@@ -1,4 +1,5 @@
 <script>
+  export let svg;
   export let alt = '';
 
 </script>
@@ -6,7 +7,7 @@
 <template lang="pug">
   button 
     span= '{alt}'
-    slot
+    svelte:component(this='{svg}')
 
 </template>
 
@@ -19,8 +20,7 @@
   button > span
     @apply sr-only
 
-  button > svg,
-  button > img
+  button > svg
     @apply h-6 w-6
 
 </style>

@@ -1,10 +1,24 @@
+<script>
+  import Logo from '$/nav/left/logo.svelte';
+  import Links from '$/nav/left/links.svelte';
+  
+  export let logo = {};
+  export let items = [];
+
+</script>
+
 <template lang="pug">
   .outer-flex
-    slot(name="logo")
+    +if('logo.src')
+      Logo(
+        src= '{logo.src}'
+        alt= '{logo.alt}'
+      )
+      
     
     .hide-on-mobile
       .inner-flex
-        slot(name="items")
+        Links('{items}')
         
 </template>
 

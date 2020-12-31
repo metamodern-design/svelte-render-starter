@@ -1,3 +1,11 @@
+<script>
+  import Links from '$/nav/dropdown/links.svelte';
+  
+  export let trigger;
+  export let items = [];
+
+</script>
+
 <template lang="pug">
   .relative-container
     div
@@ -5,16 +13,16 @@
         id="user-menu"
         aria-haspopup="true"
       )
-        span= '{alt}'
+        span= '{trigger.alt}'
 
-        slot(name="trigger")
+        img(src= '{trigger.src}')
 
     .popup-menu(
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="user-menu"
     )
-      slot(name="items")
+      Links('{items}')
 
     //
       Profile dropdown panel, show/hide based on dropdown state.
