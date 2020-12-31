@@ -1,4 +1,4 @@
-export const logo = {
+export const brand = {
   src: 'https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg',
   alt: 'Workflow',
 };

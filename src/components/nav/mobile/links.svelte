@@ -1,12 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
+  import { afterUpdate } from 'svelte';
 
   export let items = [];
   export let secondary = false;
   
   let currentPath = '/';
   
-  onMount(() => {
+  afterUpdate(() => {
     currentPath = window.location.pathname;
   });
 
