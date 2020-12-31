@@ -17,6 +17,8 @@
     @apply block
     @apply px-4 py-2
     @apply text-sm text-gray-700
-    @apply hover:bg-gray-100
+    
+  a:hover
+    @apply bg-gray-100
 
 </style>

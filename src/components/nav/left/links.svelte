@@ -6,7 +6,7 @@
   let currentPath = '/';
   
   onMount(() => {
-    currentPath = window.location.href;
+    currentPath = window.location.pathname;
   });
 
 </script>

@@ -20,7 +20,7 @@
   button > span
     @apply sr-only
 
-  button > svg
+  button :global(svg)
     @apply h-6 w-6
 
 </style>

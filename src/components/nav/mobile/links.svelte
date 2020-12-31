@@ -7,7 +7,7 @@
   let currentPath = '/';
   
   onMount(() => {
-    currentPath = window.location.href;
+    currentPath = window.location.pathname;
   });
 
 </script>
@@ -27,7 +27,9 @@
     @apply block
     @apply px-3 py-2 rounded-md
     @apply text-base font-medium text-gray-400
-    @apply hover:bg-gray-700 hover:text-white
+    
+  a:hover
+    @apply bg-gray-700 text-white
   
   a.active
     @apply bg-gray-900 text-white

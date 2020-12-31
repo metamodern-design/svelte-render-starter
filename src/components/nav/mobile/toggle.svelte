@@ -33,13 +33,18 @@
     @apply inline-flex items-center justify-center 
     @apply p-2 rounded-md
     @apply bg-gray-800 text-gray-400
-    @apply hover:text-white hover:bg-gray-700
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white
+    
+  button:hover
+    @apply text-white bg-gray-700
+    
+  button:focus
+    @apply outline-none 
+    @apply ring-2 ring-offset-2 ring-offset-gray-800 ring-white
   
   button > span
     @apply sr-only
 
-  button > svg
+  button :global(svg)
     @apply h-6 w-6
     
 </style>
