@@ -6,7 +6,7 @@
   import { routes } from '_/routes.js';
   
   const items = routes.filter(
-    ({ menus }) => menus.includes('main'),
+    ({ menus = [] }) => menus.includes('main'),
   );
   
 
