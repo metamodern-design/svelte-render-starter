@@ -43,6 +43,7 @@
     "del-cli": "^3.0.0",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-custom-alias": "^1.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^3.0.0",
     "postcss": "^8.2.1",

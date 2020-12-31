@@ -42,5 +42,15 @@ module.exports = {
   settings: {
     'svelte3/ignore-styles': () => true,
     'svelte3/ignore-warnings': () => true,
+    'import/resolver': {
+      'eslint-import-resolver-custom-alias': {
+        'alias': {
+          '_': './src',
+          '$': './src/components',
+          '@': './src/routes',
+        },
+        'extensions': ['.js', '.svelte'],
+      },
+    },
   },
 };

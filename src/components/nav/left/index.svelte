@@ -1,4 +1,9 @@
 <script>
+  import Logo fro{ routes } from '_/routes.js';
+import Logo from '$/nav/left/logo.svelte';
+import Links from '$/nav/left/links.svelte';
+
+import { logo } from '$/nav/mock<script>
   import Logo from '$/nav/left/logo.svelte';
   import Links from '$/nav/left/links.svelte';
   

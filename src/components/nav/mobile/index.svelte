@@ -6,7 +6,7 @@
   mobileMenuIsOpen.subscribe((state) => {
     isOpen = state;
   });
-    
+  
 </script>
 
 <div class="hidden md:hidden">
