@@ -23,8 +23,8 @@
     +if('isOpen')
       Close
 
-    +else()
-      Hamburger
+      +else()
+        Hamburger
 
 </template>
   
