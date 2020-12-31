@@ -1,9 +1,9 @@
 <script>
-  import Hambur{ mobileMenuIsOpen } from '_/store.js';
-import Hamburger from '$/icons/hamburger.svelte';
-import Close from '$/icons/close.svelte';
+  import Hamburger from '$/icons/hamburger.svelte';
+  import Close from '$/icons/close.svelte';
 
-  
+  import { mobileMenuIsOpen } from '_/store.js';
+
   let isOpen;
 
   mobileMenuIsOpen.subscribe((state) => {

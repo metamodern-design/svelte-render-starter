@@ -6,9 +6,9 @@
   
   let currentPath = '/';
   
-  onMount(() =>
+  onMount(() => {
     currentPath = window.location.href;
-  );
+  });
 
 </script>
 
