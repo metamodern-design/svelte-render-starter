@@ -1,8 +1,6 @@
 <script>
-  import Left from '$/nav/left.svelte';
-  import Right from '$/nav/right.svelte';
-  import Icon from '$/nav/icon.svelte';
-  import Bell from '$/nav/icons/bell.svelte';
+  import Left from '$/nav/left/index.svelte';
+  import Right from '$/nav/right/index.svelte';
   import Toggle from '$/nav/mobile/toggle.svelte';
   // import Mobile from '$/nav/mobile/index.svelte';
 
