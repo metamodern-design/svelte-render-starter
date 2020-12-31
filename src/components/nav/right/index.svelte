@@ -1,9 +1,9 @@
 <script>
-  import Icon from '$/nav/icon.svelte';
+  import Icon from '$/nav/right/icon.svelte';
   import Bell from '$/icons/bell.svelte';
   import Dropdown from '$/nav/dropdown/index.svelte';
   
-  import { userProfile, userMenu } from '$nav/mock.js';
+  import { userProfile, userMenu } from '$/nav/mock.js';
 
 </script>
 

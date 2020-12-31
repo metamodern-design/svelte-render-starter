@@ -2,7 +2,7 @@
   import Logo from '$/nav/left/logo.svelte';
   import Links from '$/nav/left/links.svelte';
   
-  import { brandLogo } from '$/nav/mock.js';
+  import { logo } from '$/nav/mock.js';
   import { routes } from '_/routes.js';
   
   const items = routes.filter(
@@ -16,10 +16,10 @@
   .outer-flex
     +if('logo.src')
       Logo(
-        src= '{brandLogo.src}'
-        alt= '{brandLogo.alt}'
+        src= '{logo.src}'
+        alt= '{logo.alt}'
       )
-      
+
     .hide-on-mobile
       .inner-flex
         Links('{items}')
