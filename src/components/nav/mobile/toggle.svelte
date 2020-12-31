@@ -1,6 +1,6 @@
 <script>
-  import Hamburger from '$/nav/icons/hamburger.svelte';
-  import Close from '$/nav/icons/close.svelte';
+  import Hamburger from '$/icons/hamburger.svelte';
+  import Close from '$/icons/close.svelte';
   
   import { mobileMenuIsOpen } from '_/store.js';
   
