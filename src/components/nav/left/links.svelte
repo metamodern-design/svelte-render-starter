@@ -1,7 +1,11 @@
 <script>
   export let items = [];
   
-  const currentPath = window ? window.location.href : '/';
+  let currentPath = '/';
+  
+  onMount(() =>
+    currentPath = window.location.href;
+  );
 
 </script>
 

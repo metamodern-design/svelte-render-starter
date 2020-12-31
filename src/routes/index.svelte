@@ -51,7 +51,7 @@
 </template>
 
 
-<style lang="sugarss">
+<style lang="sugarss" global>
   @import '@fontsource/inter/400.css'
   @import '@fontsource/inter/variable.css'
   @tailwind base
