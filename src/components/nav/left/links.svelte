@@ -5,6 +5,7 @@
   
   let currentPath = '/';
   
+  // SUBSCRIBE TO A STORE TO UPDATE LOCATION
   afterUpdate(() => {
     currentPath = window.location.pathname;
   });

@@ -16,9 +16,13 @@
       )
 
       Dropdown(
-        trigger= '{userProfile}'
+        alt= '{userProfile.alt}'
         items= '{userMenu}'
       )
+        img(
+          slot="trigger"
+          src= '{userProfile.src}'
+        )
 
 </template>
 
