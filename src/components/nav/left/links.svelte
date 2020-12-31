@@ -22,10 +22,12 @@
 
 <style lang="sugarss">
   a
-    @apply text-gray-300 hover:bg-gray-700 hover:text-white 
-    @apply px-3 py-2
-    @apply rounded-md 
+    @apply text-gray-300
+    @apply px-3 py-2 rounded-md 
     @apply text-sm font-medium
+    
+  a:hover
+    @apply bg-gray-700 text-white 
   
   a.active
     @apply bg-gray-900 text-white

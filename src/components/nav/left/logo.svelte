@@ -6,7 +6,7 @@
 
 <template lang="pug">
   div
-    img('{src}' '{alt}')
+    img('{src} {alt}')
 
 </template>
 
