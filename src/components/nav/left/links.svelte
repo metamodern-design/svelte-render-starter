@@ -16,8 +16,7 @@
     a(
       href= '{path}'
       class:active= '{path === currentPath}'
-    )
-      = title
+    )= '{title}'
 
 </template>
 

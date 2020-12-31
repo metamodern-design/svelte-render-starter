@@ -8,8 +8,7 @@
     a(
       role="menuitem"
       href= '{path}'
-    )
-      = title
+    )= '{title}'
 
 </template>
 

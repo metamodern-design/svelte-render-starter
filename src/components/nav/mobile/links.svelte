@@ -18,8 +18,7 @@
       href= '{path}'
       class:active= '{path === currentPath}'
       class:secondary
-    )
-      = title
+    )= '{title}'
 
 </template>
 
