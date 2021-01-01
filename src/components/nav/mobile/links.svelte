@@ -17,7 +17,7 @@
     a(
       href= '{path}'
       class:active= '{path === currentPath}'
-      class:secondary
+      class:secondary= '{secondary}'
     )= '{title}'
 
 </template>

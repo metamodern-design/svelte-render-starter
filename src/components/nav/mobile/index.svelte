@@ -32,7 +32,10 @@
         )
       
       .menu-bottom-links
-        Links(items= '{userMenu}' secondary)
+        Links(
+          items= '{userMenu}'
+          secondary
+        )
         
 </template>
 
