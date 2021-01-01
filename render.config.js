@@ -10,11 +10,13 @@ import postcssPresetEnv from 'postcss-preset-env';
 import cssnano from 'cssnano';
 import { copy } from '@metamodern/copy-fontsource';
 
+const browsers = '> 1.5% in US, Firefox ESR, not ie <= 11, not dead';
+
 const config = ({
   context = './',
   development = false,
 } = {}) => ({
-  browsers: '> 1.5% in US, Firefox ESR, not ie <= 11, not dead',
+  browsers,
   entry: 'routes/index.svelte',
   rollupInputPlugins: [
     alias({
