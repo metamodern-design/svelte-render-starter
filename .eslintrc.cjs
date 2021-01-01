@@ -20,6 +20,7 @@ module.exports = {
     {
       files: [ '*.svelte/*_template.js' ],
       rules: {
+        'no-undef': 'off',
         'no-unused-vars': 'off',
       },
     },
@@ -29,6 +30,10 @@ module.exports = {
     'no-unused-vars': [
       'error', 
       { varsIgnorePattern: '^[A-Z]\\w+' },
+    ],
+    'no-multiple-empty-lines': [
+      'error', 
+      { 'max': 2 },
     ],
     'import/no-extraneous-dependencies': [
       'error',
