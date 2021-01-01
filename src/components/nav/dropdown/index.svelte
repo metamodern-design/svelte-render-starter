@@ -30,25 +30,16 @@
         span= '{alt}'
 
         slot(name="trigger")
-
-    .dropdown-panel(
-      role="menu"
-      aria-orientation="vertical"
-      aria-labelledby="user-menu"
-      class:active= '{isOpen === true}'
-      in:scale= '{transition.in}'
-      out:scale= '{transition.out}'
-    )
-      Links('{items}')
-
-    //
-      Profile dropdown panel, show/hide based on dropdown state.
-      Entering: "transition ease-out duration-100"
-        From: "transform opacity-0 scale-95"
-        To: "transform opacity-100 scale-100"
-      Leaving: "transition ease-in duration-75"
-        From: "transform opacity-100 scale-100"
-        To: "transform opacity-0 scale-95"
+    
+    +if('isOpen')
+      .dropdown-panel(
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="user-menu"
+        in:scale= '{transition.in}'
+        out:scale= '{transition.out}'
+      )
+        Links('{items}')
   
 </template>
 
@@ -81,8 +72,5 @@
     @apply w-48 mt-2 py-1 
     @apply bg-white rounded-md shadow-lg
     @apply ring-1 ring-black ring-opacity-5
-  
-  .dropdown-panel.active
-    @apply block
   
 </style>
