@@ -3,6 +3,7 @@
   import { routes } from '_/routes.js';
   import { userProfile, userDetails, userMenu } from '$/nav/mock.js';
   
+  import Links from '$/nav/mobile/links.svelte';
   import Profile from '$/nav/mobile/profile.svelte';
   
   let isOpen;
