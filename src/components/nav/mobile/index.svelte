@@ -1,5 +1,9 @@
 <script>
   import { mobileMenuIsOpen } from '_/store.js';
+  import { routes } from '_/routes.js';
+  import { userProfile, userDetails, userMenu } from '$/nav/mock.js';
+  
+  import Profile from '$/nav/mobile/profile';
   
   let isOpen;
 
@@ -7,25 +11,46 @@
     isOpen = state;
   });
   
+  const mainItems = routes.filter(
+    ({ menus = [] }) => menus.includes('main'),
+  );
+  
 </script>
 
-<div class="hidden md:hidden">
-  <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-    <Links />
-  </div>
-  <div class="pt-4 pb-3 border-t border-gray-700">
-    <div class="flex items-center px-5">
-      <div class="flex-shrink-0">
-        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-      </div>
-      <div class="ml-3">
-        <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-        <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
-      </div>
-      <Icon classes="ml-auto flex-shrink-0" />
-    </div>
-    <div class="mt-3 px-2 space-y-1">
-      <Links />
-    </div>
-  </div>
-</div>
+<template lang="pug">
+  .mobile-menu-container(class:active= '{isOpen}')
+    .menu-top-section
+      Links(items= '{mainItems}')
+      
+    .menu-bottom-section
+      Profile(user= '{userDetails}')
+        img(
+          slot="profile"
+          src= '{userProfile.src}'
+          alt= '{userProfile.alt}'  
+        )
+      
+      .menu-bottom-links
+        Links(items= '{userMenu}')
+        
+</template>
+
+<style lang="sugarss">
+  .mobile-menu-container
+    @apply hidden md:hidden
+    
+  .mobile-menu-container.active
+    @apply block
+  
+  .menu-top-section
+    @apply px-2 pt-2 pb-3 sm:px-3
+    @apply space-y-1
+    
+  .menu-bottom-section
+    @apply pt-4 pb-3
+    @apply border-t border-gray-700
+    
+  .menu-bottom-links
+    @apply mt-3 px-2 space-y-1
+    
+</style>

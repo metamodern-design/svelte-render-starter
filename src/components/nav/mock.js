@@ -8,6 +8,11 @@ export const userProfile = {
   alt: 'Open menu',
 };
 
+export const userDetails = {
+  name: 'Tom Cook',
+  email: 'tom@example.com',
+};
+
 export const userMenu = [
   { title: 'Your Profile', path: '#' },
   { title: 'Settings', path: '#' },
