@@ -3,6 +3,8 @@
     div
       slot
 
+</template>
+
 <style lang="sugarss">
   main > div
     @apply max-w-7xl mx-auto
