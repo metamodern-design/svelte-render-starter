@@ -1,8 +1,8 @@
 <script>
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import navaid from 'navaid';
-
   import { routes } from '_/routes.js';
+  import { location } from '_/store.js'
 
   import Nav from '$/nav/index.svelte';
   import Main from '$/Main.svelte';
@@ -22,6 +22,7 @@
       if (redirect) {
         Navaid.route(redirect(pathParams), true);
       } else {
+        location.set(path);
         Content = component;
         Props = { path, ...pathParams, ...routeParams };
       }

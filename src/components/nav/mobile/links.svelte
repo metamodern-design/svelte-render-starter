@@ -1,13 +1,13 @@
 <script>
-  import { afterUpdate } from 'svelte';
-
+  import { location } from '_/store.js';
+  
   export let items = [];
   export let secondary = false;
   
-  let currentPath = '/';
+  let currentPath;
   
-  afterUpdate(() => {
-    currentPath = window.location.pathname;
+  location.subscribe((path) => {
+    currentPath = path;
   });
 
 </script>
