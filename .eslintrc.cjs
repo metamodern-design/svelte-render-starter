@@ -12,14 +12,24 @@ module.exports = {
     'import',
     'svelte3',
   ],
-  overrides: [{
-    files: [ '*.svelte' ],
-    processor: 'svelte3/svelte3',
-    excludedFiles: 'src/index.svelte',
-  }], 
+  overrides: [
+    {
+      files: [ '**/*.svelte/*.js' ],
+      processor: 'svelte3/svelte3',
+    },
+    {
+      files: [ '**/*.svelte/*_template.js' ],
+      rules: {
+        'no-unused-vars': 'off',
+      },
+    },
+  ], 
   rules: {
     'no-undef': 'warn',
-    'no-unused-vars': 'off',
+    'no-unused-vars': [
+      'error', 
+      { varsIgnorePattern: '^[A-Z]\\w+' },
+    ],
     'no-multiple-empty-lines': [
       'error', 
       { 'max': 2 },
@@ -37,6 +47,7 @@ module.exports = {
     'import/no-mutable-exports': 'off',
   },
   settings: {
+    'svelte3/named-blocks': true,
     'svelte3/ignore-styles': () => true,
     'svelte3/ignore-warnings': () => true,
     'import/resolver': {
