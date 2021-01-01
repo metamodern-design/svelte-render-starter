@@ -21,7 +21,7 @@ module.exports = {
     'no-undef': 'warn',
     'no-unused-vars': [
       'error', 
-      { varsIgnorePattern: '[A-Z]\\w+' },
+      { varsIgnorePattern: '^[$]\\w+' },
     ],
     'no-multiple-empty-lines': [
       'error', 
