@@ -14,22 +14,8 @@ module.exports = {
   ],
   overrides: [
     {
-      files: [ '**/*.svelte' ],
+      files: [ '*.svelte' ],
       processor: 'svelte3/svelte3',
-    },
-    {
-      files: [ '**/*.svelte/*.js' ],
-      rules: {
-        'no-undef': 'warn',
-        'no-unused-vars': [
-          'error', 
-          { varsIgnorePattern: '^[A-Z]\\w+' },
-        ],
-        'import/no-unresolved': 'off',
-      },
-    },
-    {
-      files: [ '**/*.svelte/*_template.js' ],
       rules: {
         'no-undef': 'off',
         'no-unused-vars': 'off',
@@ -37,6 +23,10 @@ module.exports = {
     },
   ], 
   rules: {
+    'no-unused-vars': [
+      'error',
+      { varsIgnorePattern: '^[A-Z]\\w+' },
+    ],
     'no-multiple-empty-lines': [
       'error', 
       { 'max': 2 },
@@ -54,7 +44,7 @@ module.exports = {
     'import/no-mutable-exports': 'off',
   },
   settings: {
-    'svelte3/named-blocks': true,
+    'svelte3/ignore-warnings': () => true,
     'svelte3/ignore-styles': () => true,
     'import/resolver': {
       'eslint-import-resolver-custom-alias': {
