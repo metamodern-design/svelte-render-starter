@@ -18,6 +18,16 @@ module.exports = {
       processor: 'svelte3/svelte3',
     },
     {
+      files: [ '*.svelte/*.js' ],
+      rules: {
+        'no-undef': 'warn',
+        'no-unused-vars': [
+          'error', 
+          { varsIgnorePattern: '^[A-Z]\\w+' },
+        ],
+      },
+    },
+    {
       files: [ '*.svelte/*_template.js' ],
       rules: {
         'no-undef': 'off',
@@ -26,11 +36,6 @@ module.exports = {
     },
   ], 
   rules: {
-    'no-undef': 'warn',
-    'no-unused-vars': [
-      'error', 
-      { varsIgnorePattern: '^[A-Z]\\w+' },
-    ],
     'no-multiple-empty-lines': [
       'error', 
       { 'max': 2 },
