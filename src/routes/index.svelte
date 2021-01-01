@@ -12,20 +12,21 @@
   let Props = {};
   const Navaid = navaid('/');
   
-  routes.forEach(
-    ({
-      path, redirect, component, ...routeParams
-    }) => {
-      Navaid.on(path, (pathParams) => {
-        if (redirect) {
-          Navaid.route(redirect(pathParams), true);
-        } else {
-          Content = component;
-          Props = { path, ...pathParams, ...routeParams };
-        }
-      });
-    },
-  );
+  routes.forEach(({
+    path,
+    redirect,
+    component,
+    ...routeParams
+  }) => {
+    Navaid.on(path, (pathParams) => {
+      if (redirect) {
+        Navaid.route(redirect(pathParams), true);
+      } else {
+        Content = component;
+        Props = { path, ...pathParams, ...routeParams };
+      }
+    });
+  });
 
   onMount(() => {
     Navaid.listen();
