@@ -5,8 +5,9 @@
   import { location } from '_/store.js';
 
   import Nav from '$/nav/index.svelte';
-  import Main from '$/Main.svelte';
-  import Footer from '$/Footer.svelte';
+  import Header from '$/header/index.svelte';
+  import Main from '$/main/index.svelte';
+  import Footer from '$/footer/index.svelte';
   
   let Content;
   let Props = {};
@@ -47,12 +48,13 @@
 
 <div id="app">
   <Nav {...Props}></Nav>
-    <Main>
-      {#if Content}
-        <svelte:component this={Content} {...Props} />
-      {/if}
-    </Main>
-    <Footer></Footer>
+  <Header {...Props}></Header>
+  <Main>
+    {#if Content}
+      <svelte:component this={Content} {...Props} />
+    {/if}
+  </Main>
+  <Footer></Footer>
 </div>
 
 <style lang="sugarss" global>
