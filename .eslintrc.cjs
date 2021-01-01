@@ -14,21 +14,22 @@ module.exports = {
   ],
   overrides: [
     {
-      files: [ '*.svelte' ],
+      files: [ '**/*.svelte' ],
       processor: 'svelte3/svelte3',
     },
     {
-      files: [ '*.svelte/*.js' ],
+      files: [ '**/*.svelte/*.js' ],
       rules: {
         'no-undef': 'warn',
         'no-unused-vars': [
           'error', 
           { varsIgnorePattern: '^[A-Z]\\w+' },
         ],
+        'import/no-unresolved': 'off',
       },
     },
     {
-      files: [ '*.svelte/*_template.js' ],
+      files: [ '**/*.svelte/*_template.js' ],
       rules: {
         'no-undef': 'off',
         'no-unused-vars': 'off',
