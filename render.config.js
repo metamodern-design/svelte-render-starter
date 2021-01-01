@@ -35,7 +35,17 @@ const config = ({
       parser: sugarss,
       plugins: [].concat(
         postcssEasyImport(),
-        tailwindcss(),
+        tailwindcss({
+          purge: [],
+          darkMode: false,
+          theme: {
+            extend: {},
+          },
+          variants: {
+            extend: {},
+          },
+          plugins: [],
+        }),
         development ? [] : postcssPresetEnv({ browsers }),
         development ? [] : cssnano({ preset: 'default' }),
       ),

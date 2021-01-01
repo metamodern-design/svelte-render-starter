@@ -52,7 +52,10 @@
     @apply flex items-center max-w-xs
     @apply bg-gray-800 rounded-full 
     @apply text-sm 
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white
+    
+  button:focus
+    @apply outline-none
+    @apply ring-2 ring-white ring-offset-2 ring-offset-gray-800
   
   button > span
     @apply sr-only
