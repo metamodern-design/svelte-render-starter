@@ -1,6 +1,7 @@
 <script>
   import { scale } from 'svelte/transition';
   import { cubicIn, cubicOut } from 'svelte/easing';
+
   import Links from '$/nav/dropdown/links.svelte';
   
   export let alt = 'Open menu';
@@ -67,7 +68,6 @@
     @apply h-8 w-8 
     
   .dropdown-panel
-    @apply hidden
     @apply absolute origin-top-right right-0
     @apply w-48 mt-2 py-1 
     @apply bg-white rounded-md shadow-lg
