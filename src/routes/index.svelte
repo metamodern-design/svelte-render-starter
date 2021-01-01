@@ -2,26 +2,30 @@
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import navaid from 'navaid';
 
+  import { routes } from '_/routes.js';
+
   import Nav from '$/nav/index.svelte';
   import Main from '$/Main.svelte';
   import Footer from '$/Footer.svelte';
   
-  import { routes } from '_/routes.js';
-
   let Content;
   let Props = {};
-  let Navaid = navaid('/');
+  const Navaid = navaid('/');
   
-  routes.forEach(({ path, redirect, component, ...routeParams }) => {
-    Navaid.on(path, (pathParams) => {
-      if (redirect) {
-        Navaid.route(redirect(pathParams), true);
-      } else {
-        Content = component;
-        Props = { path, ...pathParams, ...routeParams };
-      }
-    })
-  });
+  routes.forEach(
+    ({
+      path, redirect, component, ...routeParams
+    }) => {
+      Navaid.on(path, (pathParams) => {
+        if (redirect) {
+          Navaid.route(redirect(pathParams), true);
+        } else {
+          Content = component;
+          Props = { path, ...pathParams, ...routeParams };
+        }
+      });
+    },
+  );
 
   onMount(() => {
     Navaid.listen();
@@ -32,24 +36,22 @@
   });
 
   onDestroy(() => {
-    if (Navaid.unlisten) { Navaid.unlisten(); }
+    if (Navaid.unlisten) {
+      Navaid.unlisten();
+    }
   });
 
 </script>
 
-
-<template lang="pug">
-  #app
-    Nav('{...Props}')
-    
-    Main
-      +if('Content')
-        svelte:component(this='{Content}' '{...Props}')
-    
-    Footer
-
-</template>
-
+<div id="app">
+  <Nav {...Props}></Nav>
+    <Main>
+      {#if Content}
+        <svelte:component this={Content} {...Props} />
+      {/if}
+    </Main>
+    <Footer></Footer>
+</div>
 
 <style lang="sugarss" global>
   @import '@fontsource/inter/400.css'
