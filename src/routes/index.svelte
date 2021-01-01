@@ -56,14 +56,21 @@
   @import '@fontsource/inter/variable.css'
 
   @import 'tailwindcss/base'
-  @import 'tailwindcss/components'
-  @import 'tailwindcss/utilities'
+  
+  *
+    --tw-shadow: 0 0 #0000
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000
 
   #app
     font-family: Inter
     font-weight: 400
 
-  @supports (font-variation-settings: normal) 
+  @supports (font-variation-settings: normal)
     #app
       font-family: InterVariable
       font-variation-settings: "wght" 400
