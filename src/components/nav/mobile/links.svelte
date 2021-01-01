@@ -13,12 +13,12 @@
 </script>
 
 <template lang="pug">  
-  +each('items as { $title, $path }')
+  +each('items as { title, path }')
     a(
-      href= '{$path}'
-      class:active= '{$path === currentPath}'
+      href= '{path}'
+      class:active= '{path === currentPath}'
       class:secondary
-    )= '{$title}'
+    )= '{title}'
 
 </template>
 

@@ -19,10 +19,7 @@ module.exports = {
   }], 
   rules: {
     'no-undef': 'warn',
-    'no-unused-vars': [
-      'error', 
-      { varsIgnorePattern: '^[$]\\w+' },
-    ],
+    'no-unused-vars': 'off',
     'no-multiple-empty-lines': [
       'error', 
       { 'max': 2 },
