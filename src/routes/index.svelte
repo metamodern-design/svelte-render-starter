@@ -54,7 +54,9 @@
 <style lang="sugarss" global>
   @import '@fontsource/inter/400.css'
   @import '@fontsource/inter/variable.css'
-  @tailwind base
+  @import 'tailwindcss/base'
+  @import 'tailwindcss/components'
+  @import 'tailwindcss/utilities'
 
   #app
     font-family: Inter
