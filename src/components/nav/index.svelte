@@ -2,7 +2,7 @@
   import Left from '$/nav/left/index.svelte';
   import Right from '$/nav/right/index.svelte';
   import Toggle from '$/nav/mobile/toggle.svelte';
-  // import Mobile from '$/nav/mobile/index.svelte';
+  import Mobile from '$/nav/mobile/index.svelte';
 
 </script>
 
@@ -17,7 +17,7 @@
         .show-on-mobile
           Toggle
 
-    // Mobile
+    Mobile
 
 </template>
 
