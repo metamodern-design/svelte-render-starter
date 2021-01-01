@@ -12,9 +12,9 @@
         slot(name="profile")
       
     .profile-details
-      div= '{user.name}'
+      .user-name= '{user.name}'
       
-      div= '{user.email}'
+      .user-email= '{user.email}'
       
     button
       span="View notifications"
@@ -36,12 +36,13 @@
     
   .profile-details
     @apply ml-3
+    @apply font-medium leading-none
 
-  .profile-details:nth-child(1)
-    @apply text-base font-medium leading-none text-white
+  .profile-details .user-name
+    @apply text-base text-white
   
-  .profile-details:nth-child(2)
-    @apply text-sm font-medium leading-none text-gray-400
+  .profile-details .user-email
+    @apply text-sm text-gray-400
     
   button
     @apply ml-auto flex-shrink-0 
