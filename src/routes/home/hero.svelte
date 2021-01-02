@@ -20,7 +20,9 @@
 
 <style lang="sugarss">
   .hero
-    @apply mt-10 px-4 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28
+    @apply max-w-7xl mx-auto
+    @apply mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28
+    @apply px-4 sm:px-6 lg:px-8
   
   .hero > div
     @apply sm:text-center lg:text-left

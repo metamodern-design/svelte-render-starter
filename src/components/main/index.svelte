@@ -21,7 +21,6 @@
 
   .content
     @apply max-w-7xl mx-auto
-    @apply py-6 sm:px-6 lg:px-8
   
   .inset
     @apply lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2
