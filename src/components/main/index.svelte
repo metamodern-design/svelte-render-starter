@@ -1,3 +1,8 @@
+<script>
+  export let inset;
+
+</script>
+
 <template lang="pug">
   main
     div
