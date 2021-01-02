@@ -5,7 +5,7 @@
 
 <template lang="pug">
   main
-    div
+    .content
       slot
     
     +if('inset')
@@ -19,7 +19,7 @@
     @apply relative overflow-hidden
     @apply bg-white
 
-  main > div
+  .content
     @apply max-w-7xl mx-auto
     @apply py-6 sm:px-6 lg:px-8
   
