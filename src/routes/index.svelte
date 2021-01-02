@@ -60,8 +60,9 @@
 </div>
 
 <style lang="sugarss" global>
-  @import '@fontsource/inter/400.css'
+  @import '@fontsource/inter/latin.css'
   @import '@fontsource/inter/variable.css'
+  @import '@fontsource/inter/variable-full.css'
 
   @import 'tailwindcss/base'
   
