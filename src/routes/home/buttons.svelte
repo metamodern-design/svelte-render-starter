@@ -22,7 +22,18 @@
     @apply w-full flex items-center justify-center 
     @apply px-8 md:px-10 py-3 md:py-4 rounded-md
     @apply border border-transparent
-    @apply bg-indigo-100 hover:bg-indigo-200
-    @apply text-base md:text-lg font-medium text-indigo-700
+    @apply text-base md:text-lg font-medium 
+  
+  .left a
+    @apply bg-indigo-600 text-white
+  
+  .left a:hover
+    @apply bg-indigo-700
+    
+  .right a
+    @apply bg-indigo-100 text-indigo-700
+    
+  .right a:hover
+    @apply bg-indigo-200
   
 </style>

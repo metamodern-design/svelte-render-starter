@@ -21,7 +21,7 @@
 <style lang="sugarss">
   .hero
     @apply max-w-7xl mx-auto
-    @apply mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28
+    @apply pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-28
     @apply px-4 sm:px-6 lg:px-8
   
   .hero > div
