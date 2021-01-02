@@ -61,8 +61,8 @@
 
 <style lang="sugarss" global>
   @import '@fontsource/inter/latin.css'
-  @import '@fontsource/inter/variable.css'
-  @import '@fontsource/inter/variable-full.css'
+  /* @import '@fontsource/inter/variable.css' */
+  /* @import '@fontsource/inter/variable-full.css' */
 
   @import 'tailwindcss/base'
   
@@ -79,9 +79,9 @@
     font-family: Inter
     font-weight: 400
 
-  @supports (font-variation-settings: normal)
+  /* @supports (font-variation-settings: normal)
     #app
       font-family: InterVariable
-      font-variation-settings: "wght" 400
+      font-variation-settings: "wght" 400 */
 
 </style>
