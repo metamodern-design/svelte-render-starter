@@ -11,16 +11,21 @@
 
 </script>
 
-<template lang="pug">  
-  +each('items as { title, path }')
-    a(
-      href= '{path}'
-      class:active= '{path === currentPath}'
-    )= '{title}'
+<template lang="pug">
+  div
+    +each('items as { title, path }')
+      a(
+        href= '{path}'
+        class:active= '{path === currentPath}'
+      )= '{title}'
 
 </template>
 
 <style lang="sugarss">
+  div
+    @apply flex items-baseline space-x-4
+    @apply ml-10
+
   a
     @apply text-gray-300
     @apply px-3 py-2 rounded-md 

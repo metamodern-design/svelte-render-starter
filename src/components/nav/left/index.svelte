@@ -19,8 +19,7 @@
       Logo('{src} {alt}')
 
     .hide-on-mobile
-      .links-wrapper
-        Links('{items}')
+      Links('{items}')
         
 </template>
 
@@ -30,9 +29,5 @@
     
   .hide-on-mobile
     @apply hidden md:block
-  
-  .links-wrapper
-    @apply flex items-baseline space-x-4
-    @apply ml-10
 
 </style>

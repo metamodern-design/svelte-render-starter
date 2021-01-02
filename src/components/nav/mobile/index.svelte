@@ -20,10 +20,10 @@
 
 <template lang="pug">
   .mobile-menu-container(class:active= '{isOpen}')
-    .menu-top-section
+    .top-section
       Links(items= '{mainItems}')
       
-    .menu-bottom-section
+    .bottom-section
       Profile(user= '{userDetails}')
         img(
           slot="profile"
@@ -31,11 +31,12 @@
           alt= '{userProfile.alt}'  
         )
       
-      .menu-bottom-links
+      .bottom-links
         Links(
           items= '{userMenu}'
           secondary
         )
+      
         
 </template>
 
@@ -46,15 +47,14 @@
   .mobile-menu-container.active
     @apply block
   
-  .menu-top-section
+  .top-section
     @apply px-2 pt-2 pb-3 sm:px-3
-    @apply space-y-1
     
-  .menu-bottom-section
+  .bottom-section
     @apply pt-4 pb-3
     @apply border-t border-gray-700
     
-  .menu-bottom-links
-    @apply mt-3 px-2 space-y-1
+  .bottom-links
+    @apply mt-3 px-2
     
 </style>

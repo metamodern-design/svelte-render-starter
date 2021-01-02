@@ -12,17 +12,21 @@
 
 </script>
 
-<template lang="pug">  
-  +each('items as { title, path }')
-    a(
-      href= '{path}'
-      class:active= '{path === currentPath}'
-      class:secondary= '{secondary}'
-    )= '{title}'
+<template lang="pug">
+  div
+    +each('items as { title, path }')
+      a(
+        href= '{path}'
+        class:active= '{path === currentPath}'
+        class:secondary= '{secondary}'
+      )= '{title}'
 
 </template>
 
 <style lang="sugarss">
+  div
+    @apply space-y-1
+
   a
     @apply block
     @apply px-3 py-2 rounded-md
