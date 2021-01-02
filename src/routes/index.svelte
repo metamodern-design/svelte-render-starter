@@ -48,7 +48,9 @@
 
 <div id="app">
   <Nav {...Props}></Nav>
-  <Header {...Props}></Header>
+  {#if Props.path !== '/'}
+    <Header {...Props}></Header>
+  {/if}
   <Main>
     {#if Content}
       <svelte:component this={Content} {...Props} />
