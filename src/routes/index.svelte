@@ -51,12 +51,12 @@
   {#if Props.path !== '/'}
     <Header {...Props}></Header>
   {/if}
-  <Main>
+  <Main {...Props}>
     {#if Content}
       <svelte:component this={Content} {...Props} />
     {/if}
   </Main>
-  <Footer></Footer>
+  <Footer {...Props}></Footer>
 </div>
 
 <style lang="sugarss" global>
