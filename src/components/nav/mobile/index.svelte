@@ -26,7 +26,7 @@
     .bottom-section
       Profile(user= '{userDetails}')
         img(
-          slot="profile"
+          slot="avatar"
           src= '{userProfile.src}'
           alt= '{userProfile.alt}'  
         )

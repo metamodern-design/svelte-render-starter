@@ -7,9 +7,9 @@
 
 <template lang="pug">
   .profile
-    +if('$$slots.profile')
+    +if('$$slots.avatar')
       .avatar
-        slot(name="profile")
+        slot(name="avatar")
       
     .user
       .name= '{user.name}'
