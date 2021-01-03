@@ -6,15 +6,15 @@
 </script>
 
 <template lang="pug">
-  .profile-container
+  .profile
     +if('$$slots.profile')
-      .wrapper
+      .avatar
         slot(name="profile")
       
-    .profile-details
-      .user-name= '{user.name}'
+    .user
+      .name= '{user.name}'
       
-      .user-email= '{user.email}'
+      .email= '{user.email}'
       
     button
       span="View notifications"
@@ -24,33 +24,30 @@
 </template>
 
 <style lang="sugarss">
-  .profile-container
+  .profile
     @apply flex items-center
     @apply px-5
     
-  .wrapper
+  .avatar
     @apply flex-shrink-0
     
-  .wrapper :global(img)
+  .avatar :global(img)
     @apply h-10 w-10 rounded-full
     
-  .profile-details
+  .user
     @apply ml-3
     @apply font-medium leading-none
 
-  .profile-details .user-name
+  .user .name
     @apply text-base text-white
   
-  .profile-details .user-email
+  .user .email
     @apply text-sm text-gray-400
     
   button
     @apply ml-auto flex-shrink-0 
     @apply bg-gray-800 p-1 rounded-full
-    @apply text-gray-400
-    
-  button:hover
-    @apply text-white
+    @apply text-gray-400 hover:text-white
     
   button:focus
     @apply outline-none
