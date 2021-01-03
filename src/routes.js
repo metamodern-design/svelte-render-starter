@@ -7,7 +7,7 @@ export const routes = [
     component: Home,
     title: 'Home',
     menus: ['main'],
-    inset: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+    inset: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=chad-montano-lP5MCM6nZ5A-unsplash.jpg&w=2400',
   },
   {
     path: '/about',

@@ -4,13 +4,13 @@ export const brand = {
 };
 
 export const userProfile = {
-  src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  src: 'https://images.unsplash.com/photo-1542984273-870732da09a2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=matt-odell-ZvcN7gk1QO0-unsplash.jpg%20&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   alt: 'Open menu',
 };
 
 export const userDetails = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
+  name: 'Mr. Snuggles',
+  email: 'snuggles@funny.dog',
 };
 
 export const userMenu = [

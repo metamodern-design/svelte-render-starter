@@ -7,8 +7,8 @@
   .hero
     div
       h1
-        span= "Data to enrich your"
-        span= "online business"
+        span= "It's Tuesday night."
+        span= "Tacos, anyone?"
       p
         | Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui 
         | lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
