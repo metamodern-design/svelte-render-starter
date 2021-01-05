@@ -21,7 +21,7 @@
 </script>
 
 <template lang="pug">
-  .dropdown-container
+  .dropdown
     div
       button(
         id="user-menu"
@@ -33,7 +33,7 @@
         slot(name="trigger")
     
     +if('isOpen')
-      .dropdown-panel(
+      .panel(
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="user-menu"
@@ -45,7 +45,7 @@
 </template>
 
 <style lang="sugarss">
-  .dropdown-container
+  .dropdown
     @apply relative
     @apply ml-3
     
@@ -67,7 +67,7 @@
   button > :global(svg)
     @apply h-8 w-8 
     
-  .dropdown-panel
+  .panel
     @apply absolute origin-top-right right-0
     @apply w-48 mt-2 py-1 
     @apply bg-white rounded-md shadow-lg

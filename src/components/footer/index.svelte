@@ -1,10 +1,9 @@
 <template lang="pug">
   footer
-    .container
-      :md(tag='section')
-        Built with [Svelte](https://svelte.dev)
+    :md(tag='section')
+      Built with [Svelte](https://svelte.dev)
 
-        ©2020
+      ©2020
 
 </template>
 

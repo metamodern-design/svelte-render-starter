@@ -8,8 +8,8 @@
 
 <template lang="pug">
   nav
-    .responsive-container
-      .flex-wrapper
+    div
+      .space-between
         Left
 
         Right
@@ -25,11 +25,11 @@
   nav
     @apply bg-gray-800
   
-  .responsive-container
+  nav > div
     @apply max-w-7xl mx-auto
     @apply px-4 sm:px-6 lg:px-8
   
-  .flex-wrapper
+  .space-between
     @apply flex items-center justify-between
     @apply h-16
 

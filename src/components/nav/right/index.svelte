@@ -9,7 +9,7 @@
 
 <template lang="pug">
   .hide-on-mobile
-    .flex-wrapper
+    .right
       Icon(
         svg= '{Bell}'
         alt= "View notifications"
@@ -30,7 +30,7 @@
   .hide-on-mobile
     @apply hidden md:block
     
-  .flex-wrapper
+  .right
     @apply flex items-center
     @apply ml-4 md:ml-6
   

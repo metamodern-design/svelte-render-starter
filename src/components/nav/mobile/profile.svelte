@@ -10,15 +10,13 @@
     +if('$$slots.avatar')
       .avatar
         slot(name="avatar")
-      
+
     .user
       .name= '{user.name}'
-      
       .email= '{user.email}'
-      
+
     button
       span="View notifications"
-      
       Bell
 
 </template>

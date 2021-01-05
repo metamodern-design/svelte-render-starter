@@ -5,7 +5,7 @@
 
 <template lang="pug">
   header
-    .responsive-container
+    div
       h1= '{title}'
 
 </template>
@@ -15,7 +15,7 @@
     @apply bg-white
     @apply shadow
 
-  .responsive-container
+  div
     @apply max-w-7xl mx-auto
     @apply py-6 px-4 sm:px-6 lg:px-8
 

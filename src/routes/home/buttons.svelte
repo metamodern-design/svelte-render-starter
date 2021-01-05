@@ -25,15 +25,11 @@
     @apply text-base md:text-lg font-medium 
   
   .left a
-    @apply bg-indigo-600 text-white
-  
-  .left a:hover
-    @apply bg-indigo-700
+    @apply bg-indigo-600 hover:bg-indigo-700
+    @apply text-white
     
   .right a
-    @apply bg-indigo-100 text-indigo-700
-    
-  .right a:hover
-    @apply bg-indigo-200
+    @apply bg-indigo-100 hover:bg-indigo-200
+    @apply text-indigo-700
   
 </style>

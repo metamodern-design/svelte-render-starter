@@ -14,7 +14,7 @@
 </script>
 
 <template lang="pug">
-  .left-container
+  .left
     +if('src')
       Logo('{src} {alt}')
 
@@ -24,7 +24,7 @@
 </template>
 
 <style lang="sugarss">
-  .left-container
+  .left
     @apply flex items-center
     
   .hide-on-mobile

@@ -19,11 +19,11 @@
 </script>
 
 <template lang="pug">
-  .mobile-menu-container(class:active= '{isOpen}')
-    .top-section
+  .mobile-menu(class:active= '{isOpen}')
+    .top
       Links(items= '{mainItems}')
       
-    .bottom-section
+    .bottom
       Profile(user= '{userDetails}')
         img(
           slot="avatar"
@@ -41,16 +41,16 @@
 </template>
 
 <style lang="sugarss">
-  .mobile-menu-container
+  .mobile-menu
     @apply hidden md:hidden
     
-  .mobile-menu-container.active
+  .mobile-menu.active
     @apply block
   
-  .top-section
+  .top
     @apply px-2 pt-2 pb-3 sm:px-3
     
-  .bottom-section
+  .bottom
     @apply pt-4 pb-3
     @apply border-t border-gray-700
     
